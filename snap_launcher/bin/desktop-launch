@@ -587,8 +587,11 @@ append_dir QML2_IMPORT_PATH "$SNAP/lib/$ARCH"
 append_dir QML2_IMPORT_PATH "$SNAP_DESKTOP_RUNTIME/usr/lib/$ARCH/qt5/qml"
 append_dir QML2_IMPORT_PATH "$SNAP_DESKTOP_RUNTIME/lib/$ARCH"
 
-# Fix locating the QtWebEngineProcess executable
-export QTWEBENGINEPROCESS_PATH="$SNAP_DESKTOP_RUNTIME/usr/lib/$ARCH/qt5/libexec/QtWebEngineProcess"
+# Fix locating the QtWebEngineProcess executable (PDF 30-in-1 carries its own Qt WebEngine; only use the
+# runtime's if it has one)
+if [ -x "$SNAP_DESKTOP_RUNTIME/usr/lib/$ARCH/qt5/libexec/QtWebEngineProcess" ]; then
+  export QTWEBENGINEPROCESS_PATH="$SNAP_DESKTOP_RUNTIME/usr/lib/$ARCH/qt5/libexec/QtWebEngineProcess"
+fi
 
 # Removes Qt warning: Could not find a location
 # of the system Compose files

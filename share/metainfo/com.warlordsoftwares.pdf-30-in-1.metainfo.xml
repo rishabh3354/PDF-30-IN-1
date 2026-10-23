@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PDF 30-in-1 - AppStream metainfo. THE copy to edit: build.sh copies it to
+  flatpak/share/metainfo/, app-image/ and snap-repo/share/metainfo/.
+  Add a <release> at the top of <releases> for every new version.
+-->
+<component type="desktop-application">
+	<id>com.warlordsoftwares.pdf-30-in-1</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>LicenseRef-proprietary=https://github.com/rishabh3354/PDF-30-IN-1/blob/main/share/license/LICENSE</project_license>
+	<developer id="com.warlordsoftwares">
+		<name translate="no">Warlord Softwares</name>
+	</developer>
+	<branding>
+		<color type="primary" scheme_preference="light">#FDECEC</color>
+		<color type="primary" scheme_preference="dark">#5C1F22</color>
+	</branding>
+	<name>PDF 30-in-1</name>
+	<summary>Edit, merge, convert and sign PDFs</summary>
+	<summary xml:lang="de">PDFs bearbeiten, zusammenführen, umwandeln und signieren</summary>
+	<summary xml:lang="es">Edita, une, convierte y firma PDF</summary>
+	<summary xml:lang="fr">Modifier, fusionner, convertir et signer des PDF</summary>
+	<summary xml:lang="it">Modifica, unisci, converti e firma PDF</summary>
+	<summary xml:lang="pt_BR">Edite, junte, converta e assine PDFs</summary>
+	<summary xml:lang="nl">PDF's bewerken, samenvoegen, omzetten en ondertekenen</summary>
+	<summary xml:lang="sv">Redigera, slå ihop, konvertera och signera PDF</summary>
+	<summary xml:lang="pl">Edytuj, scalaj, konwertuj i podpisuj PDF</summary>
+	<summary xml:lang="ru">Редактирование, объединение, конвертация и подпись PDF</summary>
+	<summary xml:lang="uk">Редагування, об'єднання, конвертація та підпис PDF</summary>
+	<summary xml:lang="tr">PDF düzenleyin, birleştirin, dönüştürün ve imzalayın</summary>
+	<summary xml:lang="id">Edit, gabungkan, konversi, dan tanda tangani PDF</summary>
+	<summary xml:lang="vi">Chỉnh sửa, gộp, chuyển đổi và ký PDF</summary>
+	<summary xml:lang="hi">PDF संपादित करें, जोड़ें, बदलें और साइन करें</summary>
+	<summary xml:lang="ja">PDF の編集・結合・変換・署名</summary>
+	<summary xml:lang="ko">PDF 편집, 병합, 변환, 서명</summary>
+	<summary xml:lang="zh_CN">编辑、合并、转换和签署 PDF</summary>
+	<summary xml:lang="th">แก้ไข รวม แปลง และเซ็น PDF</summary>
+	<summary xml:lang="ar">تحرير ملفات PDF ودمجها وتحويلها وتوقيعها</summary>
+	<description>
+		<p>PDF 30-in-1 is an all-in-one PDF editor and converter. Merge, split, compress and convert PDF files, edit PDF text, fill in forms and sign PDFs – 31 PDF tools in one desktop app. Your files are processed on this computer and never uploaded.</p>
+		<p xml:lang="de">PDF 30-in-1 ist ein All-in-One-PDF-Editor und -Konverter. PDF-Dateien zusammenführen, teilen, komprimieren und umwandeln, PDF-Text bearbeiten, Formulare ausfüllen und PDFs signieren – 31 PDF-Werkzeuge in einer Desktop-App. Ihre Dateien werden auf diesem Computer verarbeitet und nie hochgeladen.</p>
+		<p xml:lang="es">PDF 30-in-1 es un editor y conversor de PDF todo en uno. Une, divide, comprime y convierte archivos PDF, edita el texto de un PDF, rellena formularios y firma PDF: 31 herramientas PDF en una sola aplicación de escritorio. Tus archivos se procesan en este ordenador y nunca se suben.</p>
+		<p xml:lang="fr">PDF 30-in-1 est un éditeur et convertisseur PDF tout-en-un. Fusionnez, divisez, compressez et convertissez des fichiers PDF, modifiez le texte d'un PDF, remplissez des formulaires et signez des PDF : 31 outils PDF dans une seule application de bureau. Vos fichiers sont traités sur cet ordinateur et ne sont jamais envoyés.</p>
+		<p xml:lang="it">PDF 30-in-1 è un editor e convertitore PDF tutto in uno. Unisci, dividi, comprimi e converti file PDF, modifica il testo dei PDF, compila moduli e firma PDF: 31 strumenti PDF in un'unica app desktop. I tuoi file vengono elaborati su questo computer e non vengono mai caricati.</p>
+		<p xml:lang="pt_BR">O PDF 30-in-1 é um editor e conversor de PDF tudo em um. Junte, divida, comprima e converta arquivos PDF, edite o texto de PDFs, preencha formulários e assine PDFs: 31 ferramentas de PDF em um só aplicativo para computador. Seus arquivos são processados neste computador e nunca são enviados.</p>
+		<p xml:lang="nl">PDF 30-in-1 is een alles-in-één PDF-editor en -converter. Voeg PDF-bestanden samen, splits, comprimeer en zet ze om, bewerk PDF-tekst, vul formulieren in en onderteken PDF's: 31 PDF-hulpmiddelen in één desktop-app. Je bestanden worden op deze computer verwerkt en nooit geüpload.</p>
+		<p xml:lang="sv">PDF 30-in-1 är en allt-i-ett-PDF-redigerare och -konverterare. Slå ihop, dela, komprimera och konvertera PDF-filer, redigera PDF-text, fyll i formulär och signera PDF: 31 PDF-verktyg i en skrivbordsapp. Dina filer behandlas på den här datorn och laddas aldrig upp.</p>
+		<p xml:lang="pl">PDF 30-in-1 to wszechstronny edytor i konwerter PDF. Scalaj, dziel, kompresuj i konwertuj pliki PDF, edytuj tekst PDF, wypełniaj formularze i podpisuj PDF – 31 narzędzi PDF w jednej aplikacji na komputer. Twoje pliki są przetwarzane na tym komputerze i nigdy nie są wysyłane.</p>
+		<p xml:lang="ru">PDF 30-in-1 — универсальный редактор и конвертер PDF. Объединяйте, разделяйте, сжимайте и конвертируйте PDF-файлы, редактируйте текст PDF, заполняйте формы и подписывайте PDF — 31 инструмент для PDF в одном приложении для компьютера. Ваши файлы обрабатываются на этом компьютере и никуда не загружаются.</p>
+		<p xml:lang="uk">PDF 30-in-1 — універсальний редактор і конвертер PDF. Об'єднуйте, розділяйте, стискайте й конвертуйте PDF-файли, редагуйте текст PDF, заповнюйте форми та підписуйте PDF — 31 інструмент для PDF в одному застосунку для комп'ютера. Ваші файли обробляються на цьому комп'ютері й ніколи не вивантажуються.</p>
+		<p xml:lang="tr">PDF 30-in-1, hepsi bir arada bir PDF düzenleyici ve dönüştürücüdür. PDF dosyalarını birleştirin, bölün, sıkıştırın ve dönüştürün, PDF metnini düzenleyin, formları doldurun ve PDF'leri imzalayın: tek bir masaüstü uygulamasında 31 PDF aracı. Dosyalarınız bu bilgisayarda işlenir ve asla yüklenmez.</p>
+		<p xml:lang="id">PDF 30-in-1 adalah editor dan konverter PDF serba ada. Gabungkan, pisahkan, kompres, dan konversi file PDF, edit teks PDF, isi formulir, dan tanda tangani PDF: 31 alat PDF dalam satu aplikasi desktop. File Anda diproses di komputer ini dan tidak pernah diunggah.</p>
+		<p xml:lang="vi">PDF 30-in-1 là trình chỉnh sửa và chuyển đổi PDF tất cả trong một. Gộp, tách, nén và chuyển đổi tệp PDF, sửa văn bản PDF, điền biểu mẫu và ký PDF: 31 công cụ PDF trong một ứng dụng máy tính. Tệp của bạn được xử lý trên máy tính này và không bao giờ được tải lên.</p>
+		<p xml:lang="hi">PDF 30-in-1 एक ऑल-इन-वन PDF एडिटर और कन्वर्टर है। PDF फ़ाइलें जोड़ें, अलग करें, कंप्रेस करें और बदलें, PDF का टेक्स्ट संपादित करें, फ़ॉर्म भरें और PDF पर साइन करें – एक ही डेस्कटॉप ऐप में 31 PDF टूल। आपकी फ़ाइलें इसी कंप्यूटर पर प्रोसेस होती हैं और कभी अपलोड नहीं होतीं।</p>
+		<p xml:lang="ja">PDF 30-in-1 はオールインワンの PDF 編集・変換アプリです。PDF ファイルの結合・分割・圧縮・変換、PDF のテキスト編集、フォーム入力、PDF への署名ができる 31 の PDF ツールを 1 つのデスクトップアプリにまとめました。ファイルはこのコンピューター上で処理され、アップロードされることはありません。</p>
+		<p xml:lang="ko">PDF 30-in-1은 올인원 PDF 편집기 겸 변환기입니다. PDF 파일 병합, 분할, 압축, 변환, PDF 텍스트 편집, 양식 작성, PDF 서명까지 31가지 PDF 도구를 하나의 데스크톱 앱에 담았습니다. 파일은 이 컴퓨터에서 처리되며 업로드되지 않습니다.</p>
+		<p xml:lang="zh_CN">PDF 30-in-1 是一款一体化的 PDF 编辑器和转换器。合并、拆分、压缩和转换 PDF 文件，编辑 PDF 文字，填写表单并签署 PDF——31 个 PDF 工具集于一个桌面应用。您的文件在这台电脑上处理，绝不会上传。</p>
+		<p xml:lang="th">PDF 30-in-1 คือโปรแกรมแก้ไขและแปลง PDF แบบครบในที่เดียว รวม แยก บีบอัด และแปลงไฟล์ PDF แก้ไขข้อความใน PDF กรอกฟอร์ม และเซ็น PDF — เครื่องมือ PDF 31 อย่างในแอปเดสก์ท็อปเดียว ไฟล์ของคุณประมวลผลบนคอมพิวเตอร์เครื่องนี้และไม่ถูกอัปโหลด</p>
+		<p xml:lang="ar">PDF 30-in-1 محرر ومحوّل PDF متكامل. ادمج ملفات PDF وقسّمها واضغطها وحوّلها، وحرّر نص PDF، واملأ النماذج، ووقّع ملفات PDF - 31 أداة PDF في تطبيق سطح مكتب واحد. تُعالَج ملفاتك على هذا الكمبيوتر ولا تُرفع أبدًا.</p>
+		<p>Organize PDF files</p>
+		<ul>
+			<li>Merge PDF: combine several PDF files into one, in any order</li>
+			<li>Split PDF by page ranges, every few pages, or by file size for e-mail</li>
+			<li>Remove, extract, rotate and reorder PDF pages</li>
+			<li>Scan to PDF: turn phone photos of documents into a clean PDF</li>
+		</ul>
+		<p>Optimize</p>
+		<ul>
+			<li>Compress PDF: reduce PDF file size and keep text sharp</li>
+			<li>Repair damaged or corrupt PDF files</li>
+			<li>OCR: make scanned PDFs searchable, in over 100 languages</li>
+		</ul>
+		<p>Convert</p>
+		<ul>
+			<li>PDF to Word (DOCX), PDF to Excel (XLSX), PDF to PowerPoint (PPTX), PDF to JPG and PDF to Markdown</li>
+			<li>Word, Excel, PowerPoint, JPG, PNG and web pages (HTML) to PDF</li>
+			<li>PDF/A for long-term archiving</li>
+		</ul>
+		<p>Edit and sign</p>
+		<ul>
+			<li>PDF editor: change the PDF's own text, add text, highlights, shapes, images and drawings</li>
+			<li>Fill in PDF forms, or create fillable PDF forms</li>
+			<li>Sign PDFs with a drawn, typed or uploaded signature, or a digital certificate</li>
+			<li>Add page numbers and watermarks, crop pages, redact sensitive text</li>
+		</ul>
+		<p>Security</p>
+		<ul>
+			<li>Protect PDFs with a password (AES-256), unlock PDFs, compare two PDFs side by side</li>
+		</ul>
+		<p>Works offline, with no sign-up and no watermarks on your files. Available in 19 languages, with light and dark themes and touchscreen support. Free plan: 3 tasks a day; PRO removes the limits with a one-time payment.</p>
+	</description>
+	<launchable type="desktop-id">com.warlordsoftwares.pdf-30-in-1.desktop</launchable>
+	<categories>
+		<category>Office</category>
+		<category>Utility</category>
+	</categories>
+	<keywords>
+		<keyword>pdf</keyword>
+		<keyword>pdf editor</keyword>
+		<keyword>pdf converter</keyword>
+		<keyword>edit pdf</keyword>
+		<keyword>merge pdf</keyword>
+		<keyword>combine pdf</keyword>
+		<keyword>split pdf</keyword>
+		<keyword>compress pdf</keyword>
+		<keyword>reduce pdf size</keyword>
+		<keyword>pdf to word</keyword>
+		<keyword>word to pdf</keyword>
+		<keyword>pdf to excel</keyword>
+		<keyword>excel to pdf</keyword>
+		<keyword>pdf to powerpoint</keyword>
+		<keyword>pdf to jpg</keyword>
+		<keyword>jpg to pdf</keyword>
+		<keyword>image to pdf</keyword>
+		<keyword>html to pdf</keyword>
+		<keyword>ocr</keyword>
+		<keyword>scan to pdf</keyword>
+		<keyword>searchable pdf</keyword>
+		<keyword>sign pdf</keyword>
+		<keyword>e-signature</keyword>
+		<keyword>fill pdf form</keyword>
+		<keyword>pdf form</keyword>
+		<keyword>pdf/a</keyword>
+		<keyword>redact pdf</keyword>
+		<keyword>watermark</keyword>
+		<keyword>page numbers</keyword>
+		<keyword>rotate pdf</keyword>
+		<keyword>crop pdf</keyword>
+		<keyword>unlock pdf</keyword>
+		<keyword>protect pdf</keyword>
+		<keyword>password</keyword>
+		<keyword>compare pdf</keyword>
+		<keyword>pdf to markdown</keyword>
+		<keyword>docx</keyword>
+		<keyword>xlsx</keyword>
+		<keyword>pptx</keyword>
+		<keyword>offline</keyword>
+	</keywords>
+	<provides>
+		<binary>pdf-30-in-1</binary>
+		<mediatype>application/pdf</mediatype>
+	</provides>
+	<screenshots>
+		<screenshot type="default">
+			<caption>Every PDF tool in one app</caption>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/1_tools.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Merge and organize pages visually</caption>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/2_organize.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Edit, fill in and sign right on the page</caption>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/3_edit.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Convert to and from Word, Excel, PowerPoint and more</caption>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/4_convert.png</image>
+		</screenshot>
+		<screenshot>
+			<caption>Works offline, in light or dark</caption>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/5_private.png</image>
+		</screenshot>
+	</screenshots>
+	<url type="homepage">https://warlordsoftwares.com/apps/linux-apps/</url>
+	<url type="vcs-browser">https://github.com/rishabh3354/PDF-30-IN-1</url>
+	<url type="bugtracker">https://github.com/rishabh3354/PDF-30-IN-1/issues</url>
+	<url type="contact">https://warlordsoftwares.com/contact-us/</url>
+	<url type="donation">https://paypal.me/TechRishabh/10</url>
+	<update_contact>contact@warlordsoftwares.com</update_contact>
+	<content_rating type="oars-1.1"/>
+	<recommends>
+		<display_length compare="ge">768</display_length>
+	</recommends>
+	<supports>
+		<control>pointing</control>
+		<control>keyboard</control>
+		<control>touch</control>
+	</supports>
+	<releases>
+		<release version="2026.10.22" date="2026-10-22">
+			<description>
+				<p>First release: 31 PDF tools in one desktop app, in 19 languages.</p>
+			</description>
+		</release>
+	</releases>
+</component>

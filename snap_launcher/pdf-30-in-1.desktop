@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PDF 30-in-1
+GenericName=PDF Tools
+Comment=Merge, split, compress, convert, edit and sign PDFs offline
+Icon=pdf-30-in-1
+Exec=pdf-30-in-1 %F
+Terminal=false
+Categories=Office;Qt;
+MimeType=application/pdf;
+Keywords=pdf;merge pdf;split pdf;compress pdf;pdf to word;pdf to excel;pdf editor;sign pdf;ocr;pdf converter;
+StartupWMClass=pdf30in1

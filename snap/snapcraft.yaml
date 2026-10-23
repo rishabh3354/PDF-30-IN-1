@@ -6,10 +6,7 @@ version: '2026.10.22'
 title: PDF 30-in-1 - PDF Editor & Converter
 summary: Edit, merge, split, compress and convert PDF files - offline PDF editor
 description: |
-  **PDF 30-in-1 is an all-in-one PDF editor and PDF converter for Linux.** Merge PDF files, split
-  PDFs, compress PDFs, convert PDF to Word, Excel, PowerPoint and JPG, edit PDF text, fill in PDF
-  forms and sign PDFs - 31 PDF tools in one desktop app. Everything runs on your own computer, even
-  offline: your files are processed on this computer and never uploaded.
+  **PDF 30-in-1 is an all-in-one PDF editor and PDF converter for Linux.** Merge PDF files, split PDFs, compress PDFs, convert PDF to Word, Excel, PowerPoint and JPG, edit PDF text, fill in PDF forms and sign PDFs - 31 PDF tools in one desktop app. Everything runs on your own computer, even offline: your files are processed on this computer and never uploaded.
 
   **Organize PDF**
   - Merge PDF: combine several PDF files into one, in any order
@@ -57,7 +54,8 @@ architectures:
   - build-on: [amd64]
 
 environment:
-  SNAP_DESKTOP_RUNTIME: $SNAP/content-snap-core22-lite
+  # desktop libraries, fonts, LibreOffice, Tesseract and Ghostscript come from the pdf-30-in-1-runtime content snap
+  SNAP_DESKTOP_RUNTIME: $SNAP/pdf-30-in-1-runtime
 
 apps:
   pdf-30-in-1:
@@ -65,10 +63,9 @@ apps:
     desktop: pdf-30-in-1.desktop
     environment:
       APP_PLATFORM: "SNAP"
-      # the programs bundled below (Tesseract, Ghostscript, LibreOffice) and their libraries
-      LD_LIBRARY_PATH: $SNAP/usr/lib/x86_64-linux-gnu:$SNAP/usr/lib
-      TESSDATA_PREFIX: $SNAP/usr/share/tesseract-ocr/4.00/tessdata
-      GS_LIB: $SNAP/usr/share/ghostscript/9.55.0/Resource/Init:$SNAP/usr/share/ghostscript/9.55.0/lib:$SNAP/usr/share/ghostscript/9.55.0/Resource/Font:$SNAP/usr/share/ghostscript/fonts:$SNAP/usr/share/fonts/type1/urw-base35
+      # the runtime's Tesseract and Ghostscript data (desktop-launch puts its programs and libraries on the paths)
+      TESSDATA_PREFIX: $SNAP/pdf-30-in-1-runtime/usr/share/tesseract-ocr/4.00/tessdata
+      GS_LIB: $SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/Resource/Init:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/lib:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/Resource/Font:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/fonts:$SNAP/pdf-30-in-1-runtime/usr/share/fonts/type1/urw-base35
       # Chromium's own sandbox can't run inside a strict snap (HTML to PDF)
       QTWEBENGINE_DISABLE_SANDBOX: "1"
     plugs:
@@ -98,10 +95,10 @@ plugs:
     interface: content
     target: $SNAP/data-dir/sounds
     default-provider: gtk-common-themes
-  content-snap-core22-lite:
+  pdf-30-in-1-runtime:
     interface: content
-    target: $SNAP/content-snap-core22-lite
-    default-provider: content-snap-core22-lite
+    target: $SNAP/pdf-30-in-1-runtime
+    default-provider: pdf-30-in-1-runtime
 
 parts:
   snap-launcher:
@@ -112,30 +109,6 @@ parts:
       sed -i 's|Icon=.*|Icon=${SNAP}/meta/gui/icon.png|g' ${SNAPCRAFT_PART_SRC}/pdf-30-in-1.desktop
       mkdir -p ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/
       cp -rf ${SNAPCRAFT_PART_SRC}/pdf-30-in-1.desktop ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/pdf-30-in-1.desktop
-
-  # the helper programs some tools use: OCR, PDF/A, and Word / Excel / PowerPoint conversions
-  helpers:
-    plugin: nil
-    stage-packages:
-      - tesseract-ocr
-      - tesseract-ocr-eng
-      - ghostscript
-      - libreoffice-core-nogui
-      - libreoffice-writer-nogui
-      - libreoffice-calc-nogui
-      - libreoffice-impress-nogui
-      # metric-compatible stand-ins for the fonts Office documents ask for, so layouts don't shift
-      - fonts-liberation2
-      - fonts-crosextra-carlito
-      - fonts-crosextra-caladea
-      - fonts-dejavu-core
-      # Qt WebEngine (HTML to PDF) loads these at run time
-      - libnss3
-    override-prime: |
-      craftctl default
-      # LibreOffice reads fonts from its own folder too, so it finds them whatever fontconfig says
-      mkdir -p usr/lib/libreoffice/share/fonts/truetype
-      find usr/share/fonts -name '*.ttf' -exec cp -n {} usr/lib/libreoffice/share/fonts/truetype/ \;
 
   pdf30in1-binary:
     plugin: dump

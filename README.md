@@ -59,3 +59,4 @@ Open an issue: https://github.com/rishabh3354/PDF-30-IN-1/issues
 
 PDF 30-in-1 is made by [Warlord Softwares](https://warlordsoftwares.com). The Snap and Flathub versions include
 Tesseract (OCR), Ghostscript (PDF/A) and LibreOffice (Office conversions), each under its own licence.
+

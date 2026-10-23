@@ -1,0 +1,151 @@
+name: pdf-30-in-1
+base: core22
+version: '2026.10.22'
+# Store listing. The Snap Store searches title, summary and description: the words people type
+# ("pdf editor", "merge pdf", "compress pdf", "pdf to word") come first. Limits: title 40, summary 78.
+title: PDF 30-in-1 - PDF Editor & Converter
+summary: Edit, merge, split, compress and convert PDF files - offline PDF editor
+description: |
+  **PDF 30-in-1 is an all-in-one PDF editor and PDF converter for Linux.** Merge PDF files, split
+  PDFs, compress PDFs, convert PDF to Word, Excel, PowerPoint and JPG, edit PDF text, fill in PDF
+  forms and sign PDFs - 31 PDF tools in one desktop app. Everything runs on your own computer, even
+  offline: your files are processed on this computer and never uploaded.
+
+  **Organize PDF**
+  - Merge PDF: combine several PDF files into one, in any order
+  - Split PDF by page ranges, every N pages, or by file size for e-mail
+  - Remove pages, extract pages, rotate PDF pages, organize and reorder pages
+  - Scan to PDF: turn phone photos of documents into a clean scanned PDF
+
+  **Optimize PDF**
+  - Compress PDF: reduce PDF file size while keeping text sharp
+  - Repair damaged or corrupt PDF files
+  - OCR PDF: make scanned PDFs searchable and copyable, in over 100 languages
+
+  **Convert PDF**
+  - PDF to Word (DOCX) with editable text and tables, or the exact layout
+  - PDF to Excel (XLSX), PDF to PowerPoint (PPTX), PDF to JPG, PDF to Markdown
+  - Word to PDF, Excel to PDF, PowerPoint to PDF, JPG / PNG to PDF, HTML / web page to PDF
+  - PDF/A converter for long-term archiving
+
+  **Edit and sign PDF**
+  - PDF editor: change the PDF's own text, add text, highlights, shapes, images and drawings
+  - Fill in PDF forms, or create fillable PDF forms
+  - Sign PDF with a drawn, typed or uploaded signature, or a digital certificate
+  - Add page numbers, add a watermark, crop PDF pages, redact sensitive text
+
+  **PDF security**
+  - Protect PDF with a password (AES-256), unlock PDF, compare two PDFs side by side
+
+  **Why PDF 30-in-1**
+  - Private: works offline, no file uploads, no sign-up and no e-mail needed
+  - No watermarks on your files
+  - 19 languages, light and dark themes, touchscreen and pen support
+  - Free plan: 3 tasks a day. PRO: unlimited, one-time payment, no subscription
+  - OCR (Tesseract), PDF/A (Ghostscript) and Office conversions (LibreOffice) are included
+website: https://warlordsoftwares.com/apps/linux-apps/
+contact: https://warlordsoftwares.com/contact-us/
+issues: https://github.com/rishabh3354/PDF-30-IN-1/issues
+donation: https://paypal.me/TechRishabh/10
+license: Proprietary
+grade: stable
+confinement: strict
+
+icon: snap/gui/icon.png
+
+architectures:
+  - build-on: [amd64]
+
+environment:
+  SNAP_DESKTOP_RUNTIME: $SNAP/content-snap-core22-lite
+
+apps:
+  pdf-30-in-1:
+    command: bin/desktop-launch $SNAP/bin/pdf-30-in-1
+    desktop: pdf-30-in-1.desktop
+    environment:
+      APP_PLATFORM: "SNAP"
+      # the programs bundled below (Tesseract, Ghostscript, LibreOffice) and their libraries
+      LD_LIBRARY_PATH: $SNAP/usr/lib/x86_64-linux-gnu:$SNAP/usr/lib
+      TESSDATA_PREFIX: $SNAP/usr/share/tesseract-ocr/4.00/tessdata
+      GS_LIB: $SNAP/usr/share/ghostscript/9.55.0/Resource/Init:$SNAP/usr/share/ghostscript/9.55.0/lib:$SNAP/usr/share/ghostscript/9.55.0/Resource/Font:$SNAP/usr/share/ghostscript/fonts:$SNAP/usr/share/fonts/type1/urw-base35
+      # Chromium's own sandbox can't run inside a strict snap (HTML to PDF)
+      QTWEBENGINE_DISABLE_SANDBOX: "1"
+    plugs:
+      - home
+      - removable-media
+      - network
+      - network-status
+      - desktop
+      - desktop-legacy
+      - gsettings
+      - x11
+      - wayland
+      - unity7
+      - opengl
+
+plugs:
+  gsettings:
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+  content-snap-core22-lite:
+    interface: content
+    target: $SNAP/content-snap-core22-lite
+    default-provider: content-snap-core22-lite
+
+parts:
+  snap-launcher:
+    plugin: dump
+    source: snap_launcher/
+    override-build: |
+      craftctl default
+      sed -i 's|Icon=.*|Icon=${SNAP}/meta/gui/icon.png|g' ${SNAPCRAFT_PART_SRC}/pdf-30-in-1.desktop
+      mkdir -p ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/
+      cp -rf ${SNAPCRAFT_PART_SRC}/pdf-30-in-1.desktop ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/pdf-30-in-1.desktop
+
+  # the helper programs some tools use: OCR, PDF/A, and Word / Excel / PowerPoint conversions
+  helpers:
+    plugin: nil
+    stage-packages:
+      - tesseract-ocr
+      - tesseract-ocr-eng
+      - ghostscript
+      - libreoffice-core-nogui
+      - libreoffice-writer-nogui
+      - libreoffice-calc-nogui
+      - libreoffice-impress-nogui
+      # metric-compatible stand-ins for the fonts Office documents ask for, so layouts don't shift
+      - fonts-liberation2
+      - fonts-crosextra-carlito
+      - fonts-crosextra-caladea
+      - fonts-dejavu-core
+      # Qt WebEngine (HTML to PDF) loads these at run time
+      - libnss3
+    override-prime: |
+      craftctl default
+      # LibreOffice reads fonts from its own folder too, so it finds them whatever fontconfig says
+      mkdir -p usr/lib/libreoffice/share/fonts/truetype
+      find usr/share/fonts -name '*.ttf' -exec cp -n {} usr/lib/libreoffice/share/fonts/truetype/ \;
+
+  pdf30in1-binary:
+    plugin: dump
+    source: https://warlordsoftwares.com/static/app_builds/snap/PDF-30-IN-1.tar.gz
+    source-type: tar
+    override-build: |
+      # the archive holds the PyInstaller folder PDF-30-IN-1/ (snapcraft may or may not unwrap it)
+      SRC=.
+      [ -d PDF-30-IN-1 ] && SRC=PDF-30-IN-1
+      mkdir -p ${SNAPCRAFT_PART_INSTALL}/opt/pdf-30-in-1 ${SNAPCRAFT_PART_INSTALL}/bin
+      cp -a ${SRC}/. ${SNAPCRAFT_PART_INSTALL}/opt/pdf-30-in-1/
+      chmod +x ${SNAPCRAFT_PART_INSTALL}/opt/pdf-30-in-1/PDF-30-IN-1
+      ln -sf ../opt/pdf-30-in-1/PDF-30-IN-1 ${SNAPCRAFT_PART_INSTALL}/bin/pdf-30-in-1

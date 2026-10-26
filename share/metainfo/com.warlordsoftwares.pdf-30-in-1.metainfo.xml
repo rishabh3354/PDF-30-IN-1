@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  PDF 30-in-1 - AppStream metainfo. THE copy to edit: build.sh copies it to
-  flatpak/share/metainfo/, app-image/ and snap-repo/share/metainfo/.
-  Add a <release> at the top of <releases> for every new version.
--->
 <component type="desktop-application">
 	<id>com.warlordsoftwares.pdf-30-in-1</id>
 	<metadata_license>CC0-1.0</metadata_license>
@@ -16,26 +11,26 @@
 		<color type="primary" scheme_preference="dark">#5C1F22</color>
 	</branding>
 	<name>PDF 30-in-1</name>
-	<summary>Edit, merge, convert and sign PDFs</summary>
-	<summary xml:lang="de">PDFs bearbeiten, zusammenführen, umwandeln und signieren</summary>
-	<summary xml:lang="es">Edita, une, convierte y firma PDF</summary>
-	<summary xml:lang="fr">Modifier, fusionner, convertir et signer des PDF</summary>
-	<summary xml:lang="it">Modifica, unisci, converti e firma PDF</summary>
-	<summary xml:lang="pt_BR">Edite, junte, converta e assine PDFs</summary>
-	<summary xml:lang="nl">PDF's bewerken, samenvoegen, omzetten en ondertekenen</summary>
-	<summary xml:lang="sv">Redigera, slå ihop, konvertera och signera PDF</summary>
-	<summary xml:lang="pl">Edytuj, scalaj, konwertuj i podpisuj PDF</summary>
-	<summary xml:lang="ru">Редактирование, объединение, конвертация и подпись PDF</summary>
-	<summary xml:lang="uk">Редагування, об'єднання, конвертація та підпис PDF</summary>
-	<summary xml:lang="tr">PDF düzenleyin, birleştirin, dönüştürün ve imzalayın</summary>
-	<summary xml:lang="id">Edit, gabungkan, konversi, dan tanda tangani PDF</summary>
-	<summary xml:lang="vi">Chỉnh sửa, gộp, chuyển đổi và ký PDF</summary>
-	<summary xml:lang="hi">PDF संपादित करें, जोड़ें, बदलें और साइन करें</summary>
-	<summary xml:lang="ja">PDF の編集・結合・変換・署名</summary>
-	<summary xml:lang="ko">PDF 편집, 병합, 변환, 서명</summary>
-	<summary xml:lang="zh_CN">编辑、合并、转换和签署 PDF</summary>
-	<summary xml:lang="th">แก้ไข รวม แปลง และเซ็น PDF</summary>
-	<summary xml:lang="ar">تحرير ملفات PDF ودمجها وتحويلها وتوقيعها</summary>
+	<summary>30+ PDF tools that work offline</summary>
+	<summary xml:lang="de">30+ PDF-Werkzeuge, die offline funktionieren</summary>
+	<summary xml:lang="es">Más de 30 herramientas PDF sin conexión</summary>
+	<summary xml:lang="fr">Plus de 30 outils PDF hors ligne</summary>
+	<summary xml:lang="it">Oltre 30 strumenti PDF offline</summary>
+	<summary xml:lang="pt_BR">Mais de 30 ferramentas de PDF offline</summary>
+	<summary xml:lang="nl">30+ PDF-hulpmiddelen die offline werken</summary>
+	<summary xml:lang="sv">30+ PDF-verktyg som fungerar offline</summary>
+	<summary xml:lang="pl">Ponad 30 narzędzi PDF działających offline</summary>
+	<summary xml:lang="ru">Более 30 инструментов для PDF без интернета</summary>
+	<summary xml:lang="uk">Понад 30 інструментів для PDF без інтернету</summary>
+	<summary xml:lang="tr">Çevrimdışı çalışan 30+ PDF aracı</summary>
+	<summary xml:lang="id">30+ alat PDF yang bekerja offline</summary>
+	<summary xml:lang="vi">Hơn 30 công cụ PDF hoạt động ngoại tuyến</summary>
+	<summary xml:lang="hi">ऑफ़लाइन चलने वाले 30+ PDF टूल</summary>
+	<summary xml:lang="ja">オフラインで使える 30 以上の PDF ツール</summary>
+	<summary xml:lang="ko">오프라인에서 쓰는 30가지 이상의 PDF 도구</summary>
+	<summary xml:lang="zh_CN">30 多款离线可用的 PDF 工具</summary>
+	<summary xml:lang="th">เครื่องมือ PDF กว่า 30 อย่างที่ใช้งานแบบออฟไลน์ได้</summary>
+	<summary xml:lang="ar">أكثر من 30 أداة PDF تعمل دون اتصال</summary>
 	<description>
 		<p>PDF 30-in-1 is an all-in-one PDF editor and converter. Merge, split, compress and convert PDF files, edit PDF text, fill in forms and sign PDFs – 31 PDF tools in one desktop app. Your files are processed on this computer and never uploaded.</p>
 		<p xml:lang="de">PDF 30-in-1 ist ein All-in-One-PDF-Editor und -Konverter. PDF-Dateien zusammenführen, teilen, komprimieren und umwandeln, PDF-Text bearbeiten, Formulare ausfüllen und PDFs signieren – 31 PDF-Werkzeuge in einer Desktop-App. Ihre Dateien werden auf diesem Computer verarbeitet und nie hochgeladen.</p>
@@ -135,40 +130,41 @@
 		<keyword>xlsx</keyword>
 		<keyword>pptx</keyword>
 		<keyword>offline</keyword>
+		<keyword>offline pdf editor</keyword>
+		<keyword>pdf tools</keyword>
 	</keywords>
 	<provides>
-		<binary>pdf-30-in-1</binary>
 		<mediatype>application/pdf</mediatype>
 	</provides>
 	<screenshots>
 		<screenshot type="default">
 			<caption>Every PDF tool in one app</caption>
-			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/1_tools.png</image>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/window/1_tools.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>Merge and organize pages visually</caption>
-			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/2_organize.png</image>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/window/2_organize.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>Edit, fill in and sign right on the page</caption>
-			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/3_edit.png</image>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/window/3_edit.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>Convert to and from Word, Excel, PowerPoint and more</caption>
-			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/4_convert.png</image>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/window/4_convert.png</image>
 		</screenshot>
 		<screenshot>
 			<caption>Works offline, in light or dark</caption>
-			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/5_private.png</image>
+			<image type="source">https://raw.githubusercontent.com/rishabh3354/PDF-30-IN-1/main/share/screenshots/window/5_private.png</image>
 		</screenshot>
 	</screenshots>
-	<url type="homepage">https://warlordsoftwares.com/apps/linux-apps/</url>
+	<url type="homepage">https://warlordsoftwares.com/trending-apps/pdf-30-in-1-offline-pdf-editor-and-converter/</url>
 	<url type="vcs-browser">https://github.com/rishabh3354/PDF-30-IN-1</url>
 	<url type="bugtracker">https://github.com/rishabh3354/PDF-30-IN-1/issues</url>
 	<url type="contact">https://warlordsoftwares.com/contact-us/</url>
 	<url type="donation">https://paypal.me/TechRishabh/10</url>
 	<update_contact>contact@warlordsoftwares.com</update_contact>
-	<content_rating type="oars-1.1"/>
+	<content_rating type="oars-1.1" />
 	<recommends>
 		<display_length compare="ge">768</display_length>
 	</recommends>
@@ -180,7 +176,13 @@
 	<releases>
 		<release version="2026.10.22" date="2026-10-22">
 			<description>
-				<p>First release: 31 PDF tools in one desktop app, in 19 languages.</p>
+				<p>30+ PDF tools in one desktop app, in 19 countries languages.</p>
+				<ul>
+					<li>Merge, split, compress, rotate, crop and organize PDF pages</li>
+					<li>Convert PDF to and from Word, Excel, PowerPoint, JPG and HTML, with OCR in over 100 languages</li>
+					<li>Edit PDF text, fill in forms, sign with a drawn signature or a certificate</li>
+					<li>Light and dark themes, touchscreen support, and everything works offline</li>
+				</ul>
 			</description>
 		</release>
 	</releases>

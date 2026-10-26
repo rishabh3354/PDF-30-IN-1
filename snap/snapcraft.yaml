@@ -122,3 +122,4 @@ parts:
       cp -a ${SRC}/. ${SNAPCRAFT_PART_INSTALL}/opt/pdf-30-in-1/
       chmod +x ${SNAPCRAFT_PART_INSTALL}/opt/pdf-30-in-1/PDF-30-IN-1
       ln -sf ../opt/pdf-30-in-1/PDF-30-IN-1 ${SNAPCRAFT_PART_INSTALL}/bin/pdf-30-in-1
+

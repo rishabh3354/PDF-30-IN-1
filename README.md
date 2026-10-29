@@ -1,11 +1,11 @@
 <h1 align="center">
   <img src="share/icons/icon.png" width="96" alt="PDF 30-in-1 logo"><br>
-  PDF 30-in-1: Offline PDF Editor and Converter for Linux
+  PDF 30-in-1: Offline PDF Editor and Converter for Linux and Windows
 </h1>
 
 <p align="center">
   <b>31 PDF tools in one desktop app. Merge, split, compress, convert, edit, OCR and sign PDF files on your own computer.</b><br>
-  No uploads, no sign-up, no watermarks. Works offline on Ubuntu, Fedora, Debian, Linux Mint, Arch and any other Linux.
+  No uploads, no sign-up, no watermarks. Works offline on Windows 10 and 11, Ubuntu, Fedora, Debian, Linux Mint, Arch and any other Linux.
 </p>
 
 <p align="center">
@@ -19,14 +19,19 @@
 <p align="center">
   <a href="https://snapcraft.io/pdf-30-in-1"><img src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" height="56" alt="Get PDF 30-in-1 from the Snap Store"></a>&nbsp;
   <a href="https://flathub.org/apps/com.warlordsoftwares.pdf-30-in-1"><img src="https://flathub.org/api/badge?locale=en" height="56" alt="Get PDF 30-in-1 on Flathub"></a>&nbsp;
-  <a href="https://github.com/rishabh3354/PDF-30-IN-1/releases/latest"><img src="https://raw.githubusercontent.com/srevinsaju/get-appimage/master/static/badges/get-appimage-branding-blue.png" height="56" alt="Download the PDF 30-in-1 AppImage"></a>
+  <a href="https://github.com/rishabh3354/PDF-30-IN-1/releases/latest/download/PDF-30-in-1-x86_64.AppImage"><img src="https://raw.githubusercontent.com/srevinsaju/get-appimage/master/static/badges/get-appimage-branding-blue.png" height="56" alt="Download the PDF 30-in-1 AppImage"></a>
+</p>
+
+<p align="center">
+  <a href="https://apps.microsoft.com/detail/9PB0CQ2QL6WG"><img src="https://get.microsoft.com/images/en-us%20dark.svg" height="56" alt="Get PDF 30-in-1 from the Microsoft Store"></a>&nbsp;
+  <a href="https://github.com/rishabh3354/PDF-30-IN-1/releases/latest/download/PDF-30-in-1.exe"><img src="https://img.shields.io/badge/Windows-Download%20.exe-0078D6?style=for-the-badge&logo=windows&logoColor=white" height="56" alt="Download the PDF 30-in-1 Windows installer (.exe)"></a>
 </p>
 
 <p align="center">
   <img src="share/screenshots/1_tools.png" alt="PDF 30-in-1 home screen with all 31 PDF tools: merge, split, compress, convert, edit, OCR, sign and protect" width="100%">
 </p>
 
-**PDF 30-in-1** is an all-in-one **PDF editor, PDF converter and PDF toolkit for Linux**. It does what online
+**PDF 30-in-1** is an all-in-one **PDF editor, PDF converter and PDF toolkit for Linux and Windows**. It does what online
 sites like iLovePDF, Smallpdf and PDF24 do, and much of what Adobe Acrobat does, but every file stays on your
 computer. Merge PDFs, compress large PDFs for e-mail, convert **PDF to Word**, Excel and PowerPoint (and back),
 make scanned PDFs searchable with **OCR**, edit PDF text, fill in forms and **sign PDFs**, all without an
@@ -35,7 +40,8 @@ internet connection.
 ## Contents
 
 - [Why PDF 30-in-1](#why-pdf-30-in-1)
-- [Install](#install-on-linux)
+- [Install on Linux](#install-on-linux)
+- [Install on Windows](#install-on-windows)
 - [All 31 PDF tools](#all-31-pdf-tools)
 - [Screenshots](#screenshots)
 - [Free and PRO](#free-and-pro)
@@ -75,7 +81,8 @@ flatpak install flathub com.warlordsoftwares.pdf-30-in-1
 
 ### AppImage (any Linux, no installation)
 
-1. Download `PDF-30-in-1-x86_64.AppImage` from the [latest release](https://github.com/rishabh3354/PDF-30-IN-1/releases/latest).
+1. **[Download PDF-30-in-1-x86_64.AppImage](https://github.com/rishabh3354/PDF-30-IN-1/releases/latest/download/PDF-30-in-1-x86_64.AppImage)**
+   (or pick a version from [all releases](https://github.com/rishabh3354/PDF-30-IN-1/releases)).
 2. Make it executable and run it:
 
 ```bash
@@ -89,9 +96,25 @@ chmod +x PDF-30-in-1-x86_64.AppImage
 The AppImage uses LibreOffice, Tesseract and Ghostscript from your system for Office conversions, OCR and PDF/A.
 Install them with your package manager if you need those tools; the Snap and Flatpak already include them.
 
-### Windows
+## Install on Windows
 
-A Windows 10 and 11 version is coming. Click **Watch → Custom → Releases** at the top of this page to get notified.
+PDF 30-in-1 runs on **Windows 10 and Windows 11** (64-bit).
+
+### Microsoft Store (recommended)
+
+**[Get PDF 30-in-1 from the Microsoft Store](https://apps.microsoft.com/detail/9PB0CQ2QL6WG)**: one-click install
+and automatic updates.
+
+### Windows installer (.exe)
+
+1. **[Download PDF-30-in-1.exe](https://github.com/rishabh3354/PDF-30-IN-1/releases/latest/download/PDF-30-in-1.exe)**
+   (or pick a version from [all releases](https://github.com/rishabh3354/PDF-30-IN-1/releases)).
+2. Run it and follow the setup steps. PDF 30-in-1 appears in the Start menu.
+
+If Windows SmartScreen shows "Windows protected your PC", click **More info → Run anyway**.
+
+OCR and PDF/A are built in. Word, Excel and PowerPoint conversions use the free LibreOffice, which the app can
+download for you in one click (or it uses the copy you already have).
 
 ## All 31 PDF tools
 

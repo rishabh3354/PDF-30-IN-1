@@ -258,3 +258,4 @@ Pop!_OS, elementary OS, Zorin OS, Manjaro, Arch Linux and openSUSE.
 <sub>The Snap and Flatpak versions include Tesseract (OCR), Ghostscript (PDF/A) and LibreOffice (Office
 conversions), each under its own licence. iLovePDF, Smallpdf, PDF24 and Adobe Acrobat are trademarks of their
 respective owners; PDF 30-in-1 is not affiliated with them.</sub>
+

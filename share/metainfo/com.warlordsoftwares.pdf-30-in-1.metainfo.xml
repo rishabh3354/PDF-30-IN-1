@@ -174,6 +174,14 @@
 		<control>touch</control>
 	</supports>
 	<releases>
+		<release version="2026.11.3" date="2026-11-03">
+			<description>
+				<p>Fixed a crash in the editor when an annotation disappeared while it was being dragged</p>
+				<p>Clicking a form’s text field with the Text tool no longer closes the app</p>
+				<p>PDF to Word and PDF to Excel no longer fail on hidden control characters in the text, on tables whose columns couldn’t be measured, or on cells holding only “-” or “()”</p>
+				<p>Fixed a possible crash when resizing the window</p>
+			</description>
+		</release>
 		<release version="2026.10.22" date="2026-10-22">
 			<description>
 				<p>30+ PDF tools in one desktop app, in 19 countries languages.</p>

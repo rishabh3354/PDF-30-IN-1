@@ -1,8 +1,6 @@
 name: pdf-30-in-1
 base: core22
 version: '2026.10.22'
-# Store listing. The Snap Store searches title, summary and description: the words people type
-# ("pdf editor", "merge pdf", "compress pdf", "pdf to word") come first. Limits: title 40, summary 78.
 title: PDF 30-in-1 - PDF Editor & Converter
 summary: Edit, merge, split, compress and convert PDF files - offline PDF editor
 description: |
@@ -54,7 +52,6 @@ architectures:
   - build-on: [amd64]
 
 environment:
-  # desktop libraries, fonts, LibreOffice, Tesseract and Ghostscript come from the pdf-30-in-1-runtime content snap
   SNAP_DESKTOP_RUNTIME: $SNAP/pdf-30-in-1-runtime
 
 apps:
@@ -63,10 +60,8 @@ apps:
     desktop: pdf-30-in-1.desktop
     environment:
       APP_PLATFORM: "SNAP"
-      # the runtime's Tesseract and Ghostscript data (desktop-launch puts its programs and libraries on the paths)
       TESSDATA_PREFIX: $SNAP/pdf-30-in-1-runtime/usr/share/tesseract-ocr/4.00/tessdata
       GS_LIB: $SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/Resource/Init:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/lib:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/9.55.0/Resource/Font:$SNAP/pdf-30-in-1-runtime/usr/share/ghostscript/fonts:$SNAP/pdf-30-in-1-runtime/usr/share/fonts/type1/urw-base35
-      # Chromium's own sandbox can't run inside a strict snap (HTML to PDF)
       QTWEBENGINE_DISABLE_SANDBOX: "1"
     plugs:
       - home

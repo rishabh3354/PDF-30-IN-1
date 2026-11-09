@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://snapcraft.io/pdf-30-in-1"><img src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" height="56" alt="Get PDF 30-in-1 from the Snap Store"></a>&nbsp;
-  <a href="https://flathub.org/apps/com.warlordsoftwares.pdf-30-in-1"><img src="https://flathub.org/api/badge?locale=en" height="56" alt="Get PDF 30-in-1 on Flathub"></a>&nbsp;
+  <!-- <a href="https://flathub.org/apps/com.warlordsoftwares.pdf-30-in-1"><img src="https://flathub.org/api/badge?locale=en" height="56" alt="Get PDF 30-in-1 on Flathub"></a>&nbsp; -->
   <a href="https://github.com/rishabh3354/PDF-30-IN-1/releases/latest/download/PDF-30-in-1-x86_64.AppImage"><img src="https://raw.githubusercontent.com/srevinsaju/get-appimage/master/static/badges/get-appimage-branding-blue.png" height="56" alt="Download the PDF 30-in-1 AppImage"></a>
 </p>
 

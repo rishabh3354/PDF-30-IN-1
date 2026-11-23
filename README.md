@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <b>31 PDF tools in one desktop app. Merge, split, compress, convert, edit, OCR and sign PDF files on your own computer.</b><br>
+  <b>30+ PDF tools in one desktop app. Merge, split, compress, convert, edit, OCR and sign PDF files on your own computer.</b><br>
   No uploads, no sign-up, no watermarks. Works offline on Windows 10 and 11, Ubuntu, Fedora, Debian, Linux Mint, Arch and any other Linux.
 </p>
 

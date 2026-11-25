@@ -31,11 +31,10 @@
   <img src="share/screenshots/1_tools.png" alt="PDF 30-in-1 home screen with all 31 PDF tools: merge, split, compress, convert, edit, OCR, sign and protect" width="100%">
 </p>
 
-**PDF 30-in-1** is an all-in-one **PDF editor, PDF converter and PDF toolkit for Linux and Windows**. It does what online
-sites like iLovePDF, Smallpdf and PDF24 do, and much of what Adobe Acrobat does, but every file stays on your
-computer. Merge PDFs, compress large PDFs for e-mail, convert **PDF to Word**, Excel and PowerPoint (and back),
-make scanned PDFs searchable with **OCR**, edit PDF text, fill in forms and **sign PDFs**, all without an
-internet connection.
+PDF 30-in-1 is a PDF editor, converter and toolkit for Linux and Windows. It does what online sites like
+iLovePDF, Smallpdf and PDF24 do, and much of what Adobe Acrobat does, but every file stays on your computer. You
+can merge PDFs, compress large PDFs for e-mail, convert PDF to Word, Excel and PowerPoint (and back), make scanned
+PDFs searchable with OCR, edit PDF text, fill in forms and sign PDFs, all without an internet connection.
 
 ## Contents
 
@@ -50,18 +49,18 @@ internet connection.
 
 ## Why PDF 30-in-1
 
-- **Private by design.** Your PDFs are processed on your own computer and never uploaded. Safe for contracts,
-  bank statements, ID scans, medical records and anything else you wouldn't put on a website.
-- **Works offline.** On a plane, behind a company firewall or with no connection at all, every tool still works.
-- **31 tools, one app.** No more switching between a PDF merger, a PDF compressor, an OCR program and an online
-  converter. Everything has the same simple flow: choose files, pick options, done.
-- **No limits on file size, no queues, no watermarks.** Big scanned documents are processed at the speed of your
+- Your PDFs are processed on your own computer and never uploaded, so it's safe for contracts, bank statements,
+  ID scans, medical records and anything else you wouldn't put on a website.
+- Every tool works offline: on a plane, behind a company firewall, or with no connection at all.
+- One app has 31 tools, so you don't need a separate PDF merger, PDF compressor, OCR program and online converter.
+  Every tool works the same way: choose files, pick options, save.
+- There are no file size limits, queues or watermarks. Big scanned documents are processed at the speed of your
   own computer.
-- **Office conversions that keep the layout.** Word, Excel and PowerPoint to PDF, and PDF back to editable DOCX,
-  XLSX and PPTX. The Snap and Flatpak versions include everything needed, so there's nothing extra to install.
-- **OCR in over 100 languages.** Turn scans and photos into searchable, selectable PDF text.
-- **Easy to use.** Drag and drop files, see a live page preview, light and dark themes, touchscreen support, and an
-  interface in 20 languages.
+- Office conversions keep the layout: Word, Excel and PowerPoint to PDF, and PDF back to editable DOCX, XLSX and
+  PPTX. The Snap and Flatpak versions include everything needed, so there's nothing extra to install.
+- OCR in over 100 languages turns scans and photos into searchable, selectable PDF text.
+- Drag and drop files, see a live page preview, switch between light and dark themes, use a touchscreen, and run
+  the interface in 20 languages.
 
 ## Install on Linux
 
@@ -98,12 +97,12 @@ Install them with your package manager if you need those tools; the Snap and Fla
 
 ## Install on Windows
 
-PDF 30-in-1 runs on **Windows 10 and Windows 11** (64-bit).
+PDF 30-in-1 runs on 64-bit Windows 10 and Windows 11.
 
 ### Microsoft Store (recommended)
 
-**[Get PDF 30-in-1 from the Microsoft Store](https://apps.microsoft.com/detail/9PB0CQ2QL6WG)**: one-click install
-and automatic updates.
+[Get PDF 30-in-1 from the Microsoft Store](https://apps.microsoft.com/detail/9PB0CQ2QL6WG) to install it in one
+click and get updates automatically.
 
 ### Windows installer (.exe)
 
